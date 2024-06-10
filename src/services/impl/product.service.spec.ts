@@ -35,11 +35,13 @@ describe('ProductService Tests', () => {
 			id: 1,
 			leadTime: 15,
 			available: 0,
-			type: 'NORMAL',
+			type: 'FLASHSALE',
 			name: 'RJ45 Cable',
 			expiryDate: null,
 			seasonStartDate: null,
 			seasonEndDate: null,
+			flashStartDate: null,
+			flashEndDate: null
 		};
 		await databaseMock.insert(products).values(product);
 

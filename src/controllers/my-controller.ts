@@ -77,6 +77,18 @@ export const myController = fastifyPlugin(async server => {
 
 						break;
 					}
+
+					case 'FLASHSALE': {
+						const currentDate = new Date();
+						if (p.available > 0 && currentDate > p.flashStartDate! && currentDate < p.flashEndDate! ) {
+							p.available -= 1;
+							await dbse.update(products).set(p).where(eq(products.id, p.id));
+						} else {
+							await ps.handleFlashSaleProduct(p);
+						}
+
+						break;
+					}
 				}
 			}
 		}

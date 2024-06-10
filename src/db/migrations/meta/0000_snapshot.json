@@ -128,6 +128,18 @@
           "type": "date",
           "primaryKey": false,
           "notNull": false
+        },
+        "flash_start_date": {
+          "name": "flash_start_date",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "flash_end_date": {
+          "name": "flash_end_date",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
         }
       },
       "indexes": {},
